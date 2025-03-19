@@ -2,17 +2,17 @@ pipeline {
     agent any 
 
     environment {
-        IMAGE_NAME = "mithunsd2701/ci-cd pipeline"
+        IMAGE_NAME = "mithunsd27/ci-cd pipeline"
         REGISTRY = "docker.io"
         DOCKER_CREDENTIALS_ID = "docker-hub-crds"
         GITHUB_CREDENTIALS_ID = "Git"
-        APP_DIR = "mithunsd27"
+        APP_DIR = "/opt/docker-kec"
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: GITHUB_CREDENTIALS_ID, url: 'https://github.com/sdmithun2701/jenkins', branch: 'main'
+                git credentialsId: GITHUB_CREDENTIALS_ID, url: 'https://github.com/sdmithun2701/jenkins.git', branch: 'main'
             }
         }
 
