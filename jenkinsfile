@@ -2,11 +2,11 @@ pipeline {
     agent any 
 
     environment {
-        IMAGE_NAME = "mithunsd2701"
+        IMAGE_NAME = "mithunsd2701/my-app"
         REGISTRY = "docker.io"
         DOCKER_CREDENTIALS_ID = "docker-hub-crds"
         GITHUB_CREDENTIALS_ID = "Git"
-        APP_DIR = "/opt/docker-kec"
+        APP_DIR = "mithunsd27"
     }
 
     stages {
